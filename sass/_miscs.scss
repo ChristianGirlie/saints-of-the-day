@@ -1,0 +1,82 @@
+//  Fonts
+@import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Onest&display=swap&family=Berkshire+Swash&display=swap");
+// font-family: 'Bacasime Antique', serif;
+// font-family: 'Onest', sans-serif;
+// font-family: 'Berkshire Swash', serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex($type) {
+    @if $type ==normal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @else if $type ==column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @else if $type ==jcen {
+        display: flex;
+        justify-content: center;
+    }
+
+    @else if $type ==acen {
+        display: flex;
+        align-items: center;
+    }
+
+    @else if $type ==jend {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    @else if $type ==jspabet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @else if $type ==jcencol {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    @else if $type ==acencol {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@mixin grid-center-last($columns) {
+    $total_columns: $columns * 2;
+    $span: $total_columns / $columns;
+    $offset: $columns - 1;
+    $nth-child: if($columns % 2==0, "odd", "even");
+
+    display: grid;
+    grid-template-columns: repeat($total_columns, 1fr);
+
+    &>* {
+        grid-column: span $span;
+
+        &:nth-last-child(#{$offset}):nth-child(#{$nth-child}) {
+            grid-column: $span / span $span;
+        }
+    }
+}
+
+
+

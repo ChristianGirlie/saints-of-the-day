@@ -1,0 +1,6 @@
+@import "miscs";
+
+.wrapper {
+    height: 100vh;
+    @include flex(column);
+}
