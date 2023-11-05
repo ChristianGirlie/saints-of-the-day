@@ -27,7 +27,7 @@ body .wrapper {
   -o-border-radius: 10px;
 }
 body .wrapper .header {
-  background-color: rgb(91, 38, 30);
+  background-color: rgb(162, 112, 104);
   width: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -60,4 +60,8 @@ body .wrapper .footer {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: rgb(202, 164, 87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */

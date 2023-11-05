@@ -10,7 +10,7 @@ function displaySaintForDate(data) {
     // Variables
     const today = new Date();
     const currentMonth = today.getMonth() + 1;
-    const currentDay = today.getDate();
+    const currentDay = today.getDate() + 8;
     const todaysDate = document.querySelector(".todaysDate");
     const imgCon = document.querySelector(".imgCon");
     const saintName = document.querySelector(".saintName");
@@ -72,8 +72,11 @@ function displaySaintForDate(data) {
 
     if (saintForDate) {
         saintName.textContent = saintForDate["saint-name"];
+        //  If name is over a certain length, decrease the font size
+
+
         saintInfoLink.href = saintForDate["wiki-link"];
-        linkBtn.textContent = `More about ${saintForDate["saint-name"]}`;
+        linkBtn.textContent = `Learn about ${saintForDate["saint-name"]}`;
         imgCon.style.backgroundImage = `url(${saintForDate["image-url"]})`;
     }
 }

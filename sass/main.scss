@@ -17,7 +17,7 @@ body {
         box-shadow: 0 2px 2px rgba(178, 127, 127, 0.792);
 
 		.header {
-			background-color: rgb(91, 38, 30);
+			background-color: rgb(162, 112, 104);
 			width: 100%;
 			border-top-right-radius: 10px;
 			border-top-left-radius: 10px;
@@ -51,7 +51,8 @@ body {
 			width: 100%;
 			border-bottom-right-radius: 10px;
 			border-bottom-left-radius: 10px;
-			background-color: rgb(202, 164, 87)
+			background-color: rgb(202, 164, 87);
+            @include flex(column);
 		}
 
 		border-radius: 10px;
