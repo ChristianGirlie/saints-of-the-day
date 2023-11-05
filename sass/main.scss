@@ -1,6 +1,63 @@
 @import "miscs";
 
-.wrapper {
-    height: 100vh;
-    @include flex(column);
+body {
+	height: 100vh;
+	@include flex(column);
+    
+
+    
+
+	.wrapper {
+		display: grid;
+		justify-items: center;
+		grid-template-rows: 40px 300px 60px;
+		height: 400px;
+		width: 300px;
+		background-color: #f0dfd7;
+        box-shadow: 0 2px 2px rgba(178, 127, 127, 0.792);
+
+		.header {
+			background-color: rgb(91, 38, 30);
+			width: 100%;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+
+			h1 {
+				text-align: center;
+			}
+		}
+
+		.main {
+			width: 100%;
+			height: 100%;
+@include flex(normal);
+
+			.imgCon {
+                height: 90%;
+                width: 90%;
+				background-color: rgb(160, 132, 132);
+				border: 2px solid rgb(40, 39, 39);
+				background-repeat: no-repeat;
+				background-size: cover;
+				border-radius: 8px;
+				-webkit-border-radius: 8px;
+				-moz-border-radius: 8px;
+				-ms-border-radius: 8px;
+				-o-border-radius: 8px;
+			}
+		}
+
+		.footer {
+			width: 100%;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			background-color: rgb(202, 164, 87)
+		}
+
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-o-border-radius: 10px;
+	}
 }

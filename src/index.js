@@ -12,8 +12,8 @@ function displaySaintForDate(data) {
     const currentMonth = today.getMonth() + 1;
     const currentDay = today.getDate();
     const todaysDate = document.querySelector(".todaysDate");
+    const imgCon = document.querySelector(".imgCon");
     const saintName = document.querySelector(".saintName");
-    const saintImage = document.querySelector(".saintImage");
     const saintInfoLink = document.querySelector(".saintInfoLink");
     const linkBtn = saintInfoLink.querySelector("button");
     const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -72,9 +72,9 @@ function displaySaintForDate(data) {
 
     if (saintForDate) {
         saintName.textContent = saintForDate["saint-name"];
-        saintImage.src = saintForDate["image-url"];
         saintInfoLink.href = saintForDate["wiki-link"];
         linkBtn.textContent = `More about ${saintForDate["saint-name"]}`;
+        imgCon.style.backgroundImage = `url(${saintForDate["image-url"]})`;
     }
 }
 
