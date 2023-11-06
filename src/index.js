@@ -10,8 +10,8 @@ function displaySaintForDate(data) {
     // Variables
     const today = new Date();
     const currentMonth = today.getMonth() + 1;
-    const currentDay = today.getDate();
-    // const currentDay = 7;
+    // const currentDay = today.getDate();
+    const currentDay = 3;
     const todaysDate = document.querySelector(".todaysDate");
     const imgCon = document.querySelector(".imgCon");
     const saintName = document.querySelector(".saintName");
@@ -68,8 +68,6 @@ function displaySaintForDate(data) {
     //  Create the full today's date string
     todaysDate.textContent = `${daysOfWeek[today.getDay()-1]} ${addSuffixToDay(currentDay)} ${currentMonthName}`;
 
-    console.log(today.getDay())
-
     // Get the specific saint's data 
     const saintForDate = data[currentMonthName].find((saint) => saint["feast-day"] === currentDate);
 
@@ -82,6 +80,7 @@ function displaySaintForDate(data) {
         saintInfoLink.href = saintForDate["wiki-link"];
         linkBtn.textContent = `Learn about ${saintForDate["saint-name"]}`;
         imgCon.style.backgroundImage = `url(${saintForDate["image-url"]})`;
+        // imgCon.src = `${saintForDate["image-url"]}`;
     }
 }
 
@@ -106,5 +105,13 @@ function addSuffixToDay(day) {
 function formatH1(h1, text) {
     h1.textContent = text;
     let length = text.length;
+
+    console.log(length);
+
+    //  long = 21, 24, 24 = font-size: 1.5rem;
+
+    if (length >= 10) {
+        h1.style.fontSize = "font-size: 1.5rem;"
+    }
 }
 
