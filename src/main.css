@@ -19,7 +19,7 @@ body .wrapper {
   height: 400px;
   width: 300px;
   background-color: #f0dfd7;
-  box-shadow: 0 2px 2px rgba(178, 127, 127, 0.792);
+  box-shadow: 0 2px 5px 0px rgba(94, 68, 68, 0.465);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -27,13 +27,16 @@ body .wrapper {
   -o-border-radius: 10px;
 }
 body .wrapper .header {
-  background-color: rgb(162, 112, 104);
   width: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body .wrapper .header h1 {
   text-align: center;
+  font-size: 1.3rem;
 }
 body .wrapper .main {
   width: 100%;
@@ -59,7 +62,6 @@ body .wrapper .footer {
   width: 100%;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-color: rgb(202, 164, 87);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -14,16 +14,20 @@ body {
 		height: 400px;
 		width: 300px;
 		background-color: #f0dfd7;
-        box-shadow: 0 2px 2px rgba(178, 127, 127, 0.792);
+        box-shadow: 0 2px 5px 0px rgba(94, 68, 68, 0.465);
 
 		.header {
-			background-color: rgb(162, 112, 104);
+			// background-color: rgb(162, 112, 104);
 			width: 100%;
 			border-top-right-radius: 10px;
 			border-top-left-radius: 10px;
+            @include flex(normal);
 
 			h1 {
 				text-align: center;
+                // font-size: 1.1rem;
+                // font-size: 1.1rem;
+                font-size: 1.3rem;
 			}
 		}
 
@@ -51,7 +55,7 @@ body {
 			width: 100%;
 			border-bottom-right-radius: 10px;
 			border-bottom-left-radius: 10px;
-			background-color: rgb(202, 164, 87);
+			// background-color: rgb(202, 164, 87);
             @include flex(column);
 		}
 
