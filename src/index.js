@@ -10,8 +10,8 @@ function displaySaintForDate(data) {
 	// Variables
 	const today = new Date();
 	const currentMonth = today.getMonth() + 1;
-	// const currentDay = today.getDate();
-	const currentDay = 29; // for testing
+	const currentDay = today.getDate();
+	// const currentDay = 29; // for testing
 	const todaysDate = document.querySelector(".todaysDate");
 	const card_wrapper = document.querySelector(".card_wrapper");
 	const imgCon = document.querySelector(".imgCon");
