@@ -1,5 +1,6 @@
+
 function fetchSaintData(callback) {
-	fetch("src/saints.json")
+	fetch("../src/saints.json")
 		.then((response) => response.json())
 		.then((data) => callback(data))
 		.catch((error) => console.error("Error fetching saints data: " + error));
@@ -10,8 +11,8 @@ function displaySaintForDate(data) {
 	// Variables
 	const today = new Date();
 	const currentMonth = today.getMonth() + 1;
-	// const currentDay = today.getDate();
-	const currentDay = 29; // for testing
+	const currentDay = today.getDate();
+	// const currentDay = 30; // for testing
 	const todaysDate = document.querySelector(".todaysDate");
 	const card_wrapper = document.querySelector(".card_wrapper");
 	const imgCon = document.querySelector(".imgCon");
@@ -114,62 +115,18 @@ function formatH1(h1, text) {
 	}
 }
 
-//  --- Handling the links section ---
 
-const copyLinkBtn = document.querySelector("#copyLinkBtn");
-const widgetPagePreviewBtn = document.querySelector("#widgetPagePreviewBtn");
+// Get the current URL
+const url = new URL(window.location.href);
+const flowerImages = document.querySelectorAll(".flowerImages");
 
-function linkCreation() {
-	// Variables
-	let flowerOptions = document.getElementsByName("flowerOptions");
-	const flowerImages = document.querySelectorAll(".flowerImages");
-	let flowerResult = "";
+// Extract the color and name parameters from the URL
+let flowers = url.searchParams.get("flowers");
 
-	flowerOptions.forEach((option) => {
-		flowerImages.forEach((flower) => {
-			if (option.checked && option.value == "true") {
-				flowerResult = option.value;
-				flower.style.opacity = 1;
-			} else if (option.checked && option.value == "false") {
-				flowerResult = option.value;
-				flower.style.opacity = 0;
-			}
-		});
-	});
-
-	//  Getting the current URL from the tab
-	let url = new URL(window.location.href);
-	let defaultLink = url.href;
-	defaultLink = defaultLink.replace("index.html", "p/");
-
-	let completedLink = defaultLink + "?flowers=" + flowerResult;
-
-	link(completedLink);
-}
-
-function link(url) {
-	//  Copy the link button
-	copyLinkBtn.addEventListener("click", () => {
-		navigator.clipboard.writeText(url);
-		copyLinkBtn.style.color = "#4F9A55";
-		copyLinkBtn.style.border = "1px solid #58AC5F";
-
-		setTimeout(() => {
-			copyLinkBtn.style.color = "black";
-			copyLinkBtn.style.border = "1px solid black";
-		}, 1000);
-	});
-	
-	//  View the live preview of the widget button
-	widgetPagePreviewBtn.addEventListener("click", () => {
-		let a = document.createElement("a");
-		a.href = url;
-		a.target = "_blank";
-		a.click();
-	});
-
-}
-
-setInterval(() => {
-	linkCreation();
-}, 100);
+flowerImages.forEach((flower) => {
+	if (flowers == "true") {
+		flower.style.opacity = 1;
+	} else if (flowers == "false") {
+		flower.style.opacity = 0;
+	}
+});

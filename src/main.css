@@ -11,6 +11,92 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 40px;
+}
+body .options_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f0d7d8;
+  border: 1px solid black;
+  width: 400px;
+  font-family: "Onest", sans-serif;
+  padding: 20px 10px;
+  box-shadow: 0 2px 3px 0px rgba(94, 68, 68, 0.224);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+body .options_container .title_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+body .options_container .title_container h1 {
+  font-family: "Bacasime Antique", serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+body .options_container .title_container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+body .options_container .title_container span img {
+  width: 43%;
+}
+body .options_container .flower_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body .options_container .flower_container div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+body .options_container .input_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+body .options_container .input_wrapper button {
+  padding: 7px;
+  outline: none;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-family: "Onest", sans-serif;
+  color: inherit;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+body .options_container .input_wrapper button:hover, body .options_container .input_wrapper button:focus, body .options_container .input_wrapper button:active {
+  background-color: #fdf0ff;
+}
+body .options_container footer a {
+  -webkit-text-decoration: underline wavy #d89195;
+          text-decoration: underline wavy #d89195;
+  color: #cc6368;
+  font-weight: bold;
+}
+body .options_container footer a:hover {
+  color: #c89d9f;
 }
 body .card_wrapper {
   background-color: #f0d7d8;

@@ -3,6 +3,101 @@
 body {
 	height: 100vh;
 	@include flex(column);
+	gap: 40px;
+
+	.options_container {
+		@include flex(column);
+		gap: 15px;
+		background-color: #f0d7d8;
+		border: 1px solid black;
+		width: 400px;
+		font-family: "Onest", sans-serif;
+		padding: 20px 10px;
+		box-shadow: 0 2px 3px 0px rgba(94, 68, 68, 0.224);
+
+		
+
+		.title_container {
+			@include flex(column);
+			gap: 5px;
+			margin-bottom: 10px;
+
+
+			h1 {
+				font-family: "Bacasime Antique", serif;
+				font-weight: 600;
+				font-size: 2.5rem;
+			}
+
+			span {
+				@include flex(normal);
+				gap: 5px;
+				font-size: 1rem;
+
+				img {
+					width: 43%;
+				}
+			}
+		}
+
+		.flower_container{
+			@include flex(acen);
+			gap: 10px;
+
+			div {
+				@include flex(acen);
+			gap: 5px;
+
+			}
+		}
+
+		.input_wrapper {
+			@include flex(column);
+			width: 100%;
+			gap: 10px;
+
+			button {
+				padding: 7px;
+				outline: none;
+				border: 1px solid #000000;
+				background-color: #ffffff;
+
+				cursor: pointer;
+				font-family: "Onest", sans-serif;
+				color: inherit;
+
+				&:hover,
+				&:focus,
+				&:active	 {
+					background-color: #fdf0ff;
+				}
+				border-radius: 10px;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-ms-border-radius: 10px;
+				-o-border-radius: 10px;
+}
+		}
+
+		footer {
+			a {
+				text-decoration: underline wavy #d89195;
+				color: #cc6368;
+				font-weight: bold;
+			
+				&:hover {
+					color: #c89d9f;
+				}
+			}
+		}
+
+
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-o-border-radius: 10px;
+}
 
 	.card_wrapper {
 		// background-color: #f0dfd7;
