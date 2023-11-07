@@ -21,13 +21,47 @@ body .card_wrapper {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  position: relative;
 }
-body .wrapper {
+body .card_wrapper .blurEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100.2%;
+  background-color: rgba(255, 192, 203, 0);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: -1;
+}
+body .card_wrapper .flow {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30%;
+}
+body .card_wrapper .flow-bottom {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 30%;
+}
+body .card_wrapper .wrapper {
   display: grid;
   justify-items: center;
   grid-template-rows: 40px 315px 43px;
   height: 400px;
   width: 300px;
+  background-color: rgba(255, 255, 255, 0.431372549);
   border: 1px solid black;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -35,7 +69,7 @@ body .wrapper {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-body .wrapper .header {
+body .card_wrapper .wrapper .header {
   width: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -44,26 +78,27 @@ body .wrapper .header {
   align-items: center;
   padding-top: 14px;
 }
-body .wrapper .header h1 {
+body .card_wrapper .wrapper .header h1 {
+  font-family: "Bacasime Antique", serif;
   text-align: center;
   font-size: 1.7rem;
 }
-body .wrapper .main:hover .flip-box-inner {
+body .card_wrapper .wrapper .main:hover .flip-box-inner {
   transform: rotateY(180deg);
 }
-body .wrapper .imgCon,
-body .wrapper .flip-box-back {
+body .card_wrapper .wrapper .imgCon,
+body .card_wrapper .wrapper .flip-box-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
-body .wrapper .main {
+body .card_wrapper .wrapper .main {
   width: 100%;
   height: 100%;
   perspective: 1000px;
 }
-body .wrapper .main .flip-box-inner {
+body .card_wrapper .wrapper .main .flip-box-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -78,7 +113,7 @@ body .wrapper .main .flip-box-inner {
   -ms-transition: transform 1s;
   -o-transition: transform 1s;
 }
-body .wrapper .main .flip-box-back {
+body .card_wrapper .wrapper .main .flip-box-back {
   background-color: rgb(160, 132, 132);
   border: 1px solid rgb(40, 39, 39);
   transform: rotateY(180deg);
@@ -90,7 +125,7 @@ body .wrapper .main .flip-box-back {
   -ms-border-radius: 10%;
   -o-border-radius: 10%;
 }
-body .wrapper .main .imgCon {
+body .card_wrapper .wrapper .main .imgCon {
   height: 85%;
   width: 85%;
   background-color: rgb(160, 132, 132);
@@ -104,8 +139,13 @@ body .wrapper .main .imgCon {
   -o-border-radius: 10%;
   box-shadow: 0 2px 5px 0px rgba(94, 68, 68, 0.465);
 }
-body .wrapper .footer {
+body .card_wrapper .wrapper .footer {
   width: 100%;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
+body .card_wrapper .wrapper .footer h2 {
+  font-family: "Bacasime Antique", serif;
 }/*# sourceMappingURL=main.css.map */

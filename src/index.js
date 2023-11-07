@@ -10,9 +10,10 @@ function displaySaintForDate(data) {
     // Variables
     const today = new Date();
     const currentMonth = today.getMonth() + 1;
-    // const currentDay = today.getDate();
-    const currentDay = 3;
+    const currentDay = today.getDate();
+    // const currentDay = 19;
     const todaysDate = document.querySelector(".todaysDate");
+    const card_wrapper = document.querySelector(".card_wrapper");
     const imgCon = document.querySelector(".imgCon");
     const saintName = document.querySelector(".saintName");
     const saintInfoLink = document.querySelector(".saintInfoLink");
@@ -80,6 +81,7 @@ function displaySaintForDate(data) {
         saintInfoLink.href = saintForDate["wiki-link"];
         linkBtn.textContent = `Learn about ${saintForDate["saint-name"]}`;
         imgCon.style.backgroundImage = `url(${saintForDate["image-url"]})`;
+        card_wrapper.style.backgroundImage = `url(${saintForDate["image-url"]})`;
         // imgCon.src = `${saintForDate["image-url"]}`;
     }
 }
