@@ -140,9 +140,13 @@ function linkCreation() {
 	//  Getting the current URL from the tab
 	let url = new URL(window.location.href);
 	let defaultLink = url.href;
-	defaultLink = defaultLink.replace("index.html", "p/");
+	defaultLink += "p/";
+
+
 
 	let completedLink = defaultLink + "?flowers=" + flowerResult;
+
+	console.log(completedLink);
 
 	link(completedLink);
 }
