@@ -166,6 +166,7 @@ body {
 					font-family: "Bacasime Antique", serif;
 					text-align: center;
 					font-size: 1.7rem;
+					margin-top: 10px;
 				}
 			}
 
@@ -220,27 +221,37 @@ body {
 						font-family: "Onest", sans-serif;
 					}
 
-					button {
-						padding: 3px 10px;
-						border: 1px solid black;
-						background-color: #ffffff;
-						cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym48.cur), auto !important;
-						box-shadow: 0 2px 3px 0px rgba(94, 68, 68, 0.465);
-
-						&:hover {
-							background-color: #f0d7d8b9;
-						}
-						border-radius: 10px;
-						-webkit-border-radius: 10px;
-						-moz-border-radius: 10px;
-						-ms-border-radius: 10px;
-						-o-border-radius: 10px;
-						transition: 400ms;
-						-webkit-transition: 400ms;
-						-moz-transition: 400ms;
-						-ms-transition: 400ms;
-						-o-transition: 400ms;
+					p {
+						font-size: 0.85rem;
 					}
+
+					a.saintInfoLink {
+						color: black;
+
+						button {
+							padding: 3px 10px;
+							border: 1px solid black;
+							background-color: #ffffff;
+							cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym48.cur), auto !important;
+							box-shadow: 0 2px 3px 0px rgba(94, 68, 68, 0.465);
+	
+							&:hover {
+								background-color: #f0d7d8b9;
+							}
+							border-radius: 10px;
+							-webkit-border-radius: 10px;
+							-moz-border-radius: 10px;
+							-ms-border-radius: 10px;
+							-o-border-radius: 10px;
+							transition: 400ms;
+							-webkit-transition: 400ms;
+							-moz-transition: 400ms;
+							-ms-transition: 400ms;
+							-o-transition: 400ms;
+						}
+					}
+
+					
 
 					border-radius: 10%;
 					-webkit-border-radius: 10%;
@@ -270,6 +281,7 @@ body {
 				border-bottom-right-radius: 15px;
 				border-bottom-left-radius: 15px;
 				@include flex(jcen);
+				margin-bottom: 10px;
 
 				h2 {
 					font-family: "Bacasime Antique", serif;

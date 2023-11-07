@@ -169,6 +169,7 @@ body .card_wrapper .wrapper .header h1 {
   font-family: "Bacasime Antique", serif;
   text-align: center;
   font-size: 1.7rem;
+  margin-top: 10px;
 }
 body .card_wrapper .wrapper .main:hover .flip-box-inner {
   transform: rotateY(180deg);
@@ -225,7 +226,13 @@ body .card_wrapper .wrapper .main .flip-box-back p,
 body .card_wrapper .wrapper .main .flip-box-back button {
   font-family: "Onest", sans-serif;
 }
-body .card_wrapper .wrapper .main .flip-box-back button {
+body .card_wrapper .wrapper .main .flip-box-back p {
+  font-size: 0.85rem;
+}
+body .card_wrapper .wrapper .main .flip-box-back a.saintInfoLink {
+  color: black;
+}
+body .card_wrapper .wrapper .main .flip-box-back a.saintInfoLink button {
   padding: 3px 10px;
   border: 1px solid black;
   background-color: #ffffff;
@@ -242,7 +249,7 @@ body .card_wrapper .wrapper .main .flip-box-back button {
   -ms-transition: 400ms;
   -o-transition: 400ms;
 }
-body .card_wrapper .wrapper .main .flip-box-back button:hover {
+body .card_wrapper .wrapper .main .flip-box-back a.saintInfoLink button:hover {
   background-color: rgba(240, 215, 216, 0.7254901961);
 }
 body .card_wrapper .wrapper .main .imgCon {
@@ -265,6 +272,7 @@ body .card_wrapper .wrapper .footer {
   border-bottom-left-radius: 15px;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 body .card_wrapper .wrapper .footer h2 {
   font-family: "Bacasime Antique", serif;
