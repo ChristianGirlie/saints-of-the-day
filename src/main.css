@@ -288,19 +288,26 @@ body .card_wrapper .wrapper .footer h2 {
 
 /* Phones */
 @media screen and (max-width: 500px) {
-  body {
-    margin: 60px 0;
+  body.mainBody {
+    margin: 50px 0 40px 0;
   }
-  body .options_container {
+  body.mainBody .card_wrapper {
+    transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -o-transform: scale(0.85);
+  }
+  body.mainBody .options_container {
     width: 80%;
   }
 }
 /* Large Screens - Laptop & Computer */
 @media screen and (min-width: 1201px) and (max-width: 1600px) {
-  body {
+  body.mainBody {
     background-color: blueviolet;
   }
-  body .card_wrapper {
+  body.mainBody .card_wrapper {
     margin-top: 10px;
     transform: scale(0.8);
     -webkit-transform: scale(0.8);
@@ -308,7 +315,7 @@ body .card_wrapper .wrapper .footer h2 {
     -ms-transform: scale(0.8);
     -o-transform: scale(0.8);
   }
-  body .options_container {
+  body.mainBody .options_container {
     margin-top: -50px;
     transform: scale(0.8);
     -webkit-transform: scale(0.8);

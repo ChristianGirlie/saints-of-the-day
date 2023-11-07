@@ -301,8 +301,16 @@ body {
 
 /* Phones */
 @media screen and (max-width: 500px) {
-	body {
-		margin: 60px 0;
+	body.mainBody {
+		margin: 50px 0 40px 0;
+
+		.card_wrapper {
+			transform: scale(0.85);
+			-webkit-transform: scale(0.85);
+			-moz-transform: scale(0.85);
+			-ms-transform: scale(0.85);
+			-o-transform: scale(0.85);
+}
 
 		.options_container {
 			width: 80%;
@@ -312,7 +320,7 @@ body {
 
 /* Large Screens - Laptop & Computer */
 @media screen and (min-width: 1201px) and (max-width: 1600px) {
-	body {
+	body.mainBody {
 		background-color: blueviolet;
 
 		.card_wrapper {
