@@ -10,13 +10,13 @@ function displaySaintForDate(data) {
 	// Variables
 	const today = new Date();
 	const currentMonth = today.getMonth() + 1;
-	// const currentDay = today.getDate();
-	const currentDay = 22;
+	const currentDay = today.getDate();
+	// const currentDay = 30; // for testing
 	const todaysDate = document.querySelector(".todaysDate");
 	const card_wrapper = document.querySelector(".card_wrapper");
 	const imgCon = document.querySelector(".imgCon");
 	const saintNames = document.querySelectorAll(".saintName");
-	const saintNameH1 = document.querySelector("header .saintName");
+	const saintNameH1 = document.querySelector(".header .saintName");
 	const saintInfoLink = document.querySelector(".saintInfoLink");
 	const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 	let currentMonthName;
@@ -72,19 +72,17 @@ function displaySaintForDate(data) {
 	const saintForDate = data[currentMonthName].find((saint) => saint["feast-day"] === currentDate);
 
 	if (saintForDate) {
-		// saintName.textContent = saintForDate["saint-name"];
-
 		saintNames.forEach((name) => {
 			name.textContent = saintForDate["saint-name"];
 		});
 
-		//  If name is over a certain length, decrease the font size
-		// formatH1(saintName, saintForDate["saint-name"]);
+		formatH1(saintNameH1, saintForDate["saint-name"]);
 
 		saintInfoLink.href = saintForDate["wiki-link"];
+
 		imgCon.style.backgroundImage = `url(${saintForDate["image-url"]})`;
+
 		card_wrapper.style.backgroundImage = `url(${saintForDate["image-url"]})`;
-		// imgCon.src = `${saintForDate["image-url"]}`;
 	}
 }
 
@@ -107,14 +105,11 @@ function addSuffixToDay(day) {
 }
 
 function formatH1(h1, text) {
-	h1.textContent = text;
 	let length = text.length;
 
-	console.log(length);
-
-	//  long = 21, 24, 24 = font-size: 1.5rem;
-
-	if (length >= 10) {
-		h1.style.fontSize = "font-size: 1.5rem;";
+	if (length >= 21 && length <= 24) {
+		h1.style.fontSize = "1.5rem";
+	} else if (length >= 25 && length <= 29) {
+		h1.style.fontSize = "1.4rem";
 	}
 }

@@ -140,10 +140,11 @@ body .card_wrapper .wrapper .main .flip-box-back button {
   font-family: "Onest", sans-serif;
 }
 body .card_wrapper .wrapper .main .flip-box-back button {
-  padding: 3px 5px;
+  padding: 3px 10px;
   border: 1px solid black;
   background-color: #ffffff;
   cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym48.cur), auto !important;
+  box-shadow: 0 2px 3px 0px rgba(94, 68, 68, 0.465);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
